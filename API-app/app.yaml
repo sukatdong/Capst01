@@ -1,2 +1,17 @@
-runtime: nodejs 16 
-service : default
+runtime: nodejs16
+service: default
+
+env_variables:
+  PORT: 80
+
+handlers:
+  - url: /register
+    script: auto
+  - url: /login
+    script: auto
+  - url: /reset-password
+    script: auto
+  - url: /users
+    script: auto
+  - url: /.*
+    script: auto
